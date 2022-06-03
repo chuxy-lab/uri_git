@@ -1,1 +1,1 @@
-counting words
+Zuri project repository
