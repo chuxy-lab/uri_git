@@ -20,7 +20,7 @@ def find_anagram(word, anagram):
     
     # first check: length
     if len(sort_word) != len(sort_anagram):
-        return "This is not anagram"
+        return "False"
    
     # second check: add
     for loop_over_word in sort_word:
@@ -37,7 +37,10 @@ def find_anagram(word, anagram):
     # fouth check: net = 0
     for loop_over_word in track_letters:
         if track_letters[loop_over_word] != 0:
-            return "This is not anagram"
-    return "This is anagram"
+            return "False"
+    return "True"
 
-print(find_anagram('below', 'elbow'))
+input_word = input("Enter first word: ")
+input_anagram = input("Enter second word: ")
+
+print(find_anagram(input_word, input_anagram))
